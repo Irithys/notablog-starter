@@ -1,8 +1,14 @@
 name: Node.js Reference Test
 
-on:
-  push:
+# on:
+#   push:
 
+on:
+  schedule:
+    # Runs at 12am IST
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+    
 jobs:
   build:
     runs-on: ubuntu-latest
